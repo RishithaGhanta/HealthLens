@@ -62,6 +62,12 @@ HealthLens/
 ├── .env.example
 ├── .gitignore
 │
+├── screenshots/
+│   ├── home.png
+│   ├── results-intro.png
+│   ├── results-evaluation.png
+│   └── results-exploration.png
+│
 ├── templates/
 │   ├── index.html
 │   ├── result.html
@@ -77,7 +83,7 @@ HealthLens/
 ### 1. Clone the repository
 
 ```text
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/RishithaGhanta/HealthLens.git
 cd HealthLens
 ```
 
