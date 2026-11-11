@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthLens | AI Health Claim Analysis</title>
+    <meta name="description" content="HealthLens helps users understand health information through structured AI analysis.">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="hero-section" aria-labelledby="hero-title">
+            <p class="eyebrow">AI Health Literacy Prototype</p>
+
+            <h1 id="hero-title">HealthLens</h1>
+
+            <p class="hero-subtitle">
+                Helping users understand health information through structured AI analysis.
+            </p>
+
+            <p class="hero-description">
+                Enter a health claim and receive AI-generated guidance on key factors to consider,
+                potential concerns, and questions to ask.
+            </p>
+
+            <form class="claim-panel" action="{{ url_for('home') }}" method="post">
+                <label class="sr-only" for="health-claim">Health claim</label>
+
+                <textarea
+                    id="health-claim"
+                    name="health_claim"
+                    rows="8"
+                    placeholder="Example: Drinking apple cider vinegar cures diabetes."
+                ></textarea>
+
+                <button type="submit">Evaluate Claim</button>
+            </form>
+
+                <!-- Loading overlay -->
+            <div id="loading-overlay" class="loading-overlay" hidden>
+                <div class="spinner"></div>
+                <p>Analyzing your health claim...</p>
+            </div>
+
+            <nav class="secondary-links" aria-label="HealthLens links">
+                <a href="{{ url_for('how_it_works') }}">How it works</a>
+                <a href="{{ url_for('about') }}">About HealthLens</a>
+            </nav>
+
+
+            <p class="disclaimer">
+                HealthLens is an educational AI prototype designed to improve health literacy.
+                It provides structured insights to help users critically evaluate health claims
+                and is not a substitute for professional medical advice.
+            </p>
+
+
+            
+
+
+        </section>
+    </main>
+
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const form = document.querySelector("form");
+        const overlay = document.getElementById("loading-overlay");
+
+        form.addEventListener("submit", function () {
+
+            overlay.hidden = false;
+
+        });
+
+    });
+    </script>
+
+</body>
+</html>

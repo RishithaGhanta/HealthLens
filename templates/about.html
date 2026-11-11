@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthLens | About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="page-shell info-page">
+        <section class="hero-section">
+            <p class="eyebrow">Educational AI Prototype</p>
+            <h1>About HealthLens</h1>
+            <p class="hero-subtitle">AI-Assisted Health Literacy Prototype</p>
+
+            <!-- Information cards section -->
+            <section class="info-section">
+                <!-- Our Mission card -->
+                <article class="info-card">
+                    <h2>Our Mission</h2>
+                    <p>
+                        HealthLens helps improve health literacy by encouraging users to think critically 
+                        about health claims instead of accepting health information at face value. We believe that 
+                        understanding how to evaluate health information is a valuable skill for everyone.
+                    </p>
+                </article>
+
+                <!-- What HealthLens Does card -->
+                <article class="info-card">
+                    <h2>What HealthLens Does</h2>
+                    <p>HealthLens provides structured analysis that:</p>
+                    <ul>
+                        <li>Identifies the claim category (nutrition, treatment, prevention, etc.)</li>
+                        <li>Provides educational context about the topic</li>
+                        <li>Highlights important considerations for critical evaluation</li>
+                        <li>Suggests thoughtful questions to explore</li>
+                        <li>Recommends reliable sources for further learning</li>
+                    </ul>
+                </article>
+
+                <!-- What HealthLens Does NOT Do card -->
+                <article class="info-card">
+                    <h2>What HealthLens Does NOT Do</h2>
+                    <p>It's important to understand the limitations of HealthLens:</p>
+                    <ul>
+                        <li><strong>Does not diagnose diseases</strong> — It cannot and should not be used for medical diagnosis</li>
+                        <li><strong>Does not replace healthcare professionals</strong> — Always consult qualified doctors for medical concerns</li>
+                        <li><strong>Does not determine if claims are true or false</strong> — It teaches you how to evaluate claims yourself</li>
+                        <li><strong>Does not provide medical advice</strong> — It is an educational tool only</li>
+                    </ul>
+                </article>
+
+                <!-- AI Transparency card -->
+                <article class="info-card">
+                    <h2>AI Transparency</h2>
+                    <p>
+                        HealthLens uses Google's Gemini language model to generate educational analysis. 
+                        The responses are created based on the model's general knowledge and reasoning capabilities. 
+                        This means the analysis reflects what the AI has learned from training data, not verified 
+                        scientific conclusions. All responses are intended for educational purposes to help you 
+                        think more critically about health information.
+                    </p>
+                </article>
+
+                <!-- Disclaimer card -->
+                <article class="info-card disclaimer-card">
+                    <h2>Disclaimer</h2>
+                    <p>
+                        HealthLens is an AI-assisted educational prototype developed to promote health literacy. 
+                        The analysis is generated using a language model's general knowledge and reasoning capabilities. 
+                        It is intended to support learning and critical evaluation and should not be interpreted as a 
+                        definitive scientific assessment or as a substitute for advice from qualified healthcare professionals.
+                    </p>
+                </article>
+            </section>
+
+            <!-- Back to home button -->
+            <div class="nav-actions">
+                <a href="{{ url_for('home') }}">
+                    <button class="primary-button">Back to Home</button>
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

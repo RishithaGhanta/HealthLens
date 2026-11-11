@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthLens | How It Works</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="page-shell info-page">
+        <section class="hero-section">
+            <p class="eyebrow">Educational AI Prototype</p>
+            <h1>How HealthLens Works</h1>
+            <p class="hero-subtitle">Understanding the AI-assisted analysis process</p>
+
+            <!-- Workflow steps section -->
+            <section class="workflow-section">
+                <!-- Step 1 -->
+                <div class="workflow-step">
+                    <div class="step-number">1</div>
+                    <h2>You Enter a Health Claim</h2>
+                    <p>
+                        Start by typing or pasting any health claim you want to understand better. 
+                        This could be something you read online, heard from a friend, or saw in an advertisement.
+                    </p>
+                </div>
+
+                <!-- Arrow separator -->
+                <div class="step-arrow">↓</div>
+
+                <!-- Step 2 -->
+                <div class="workflow-step">
+                    <div class="step-number">2</div>
+                    <h2>HealthLens Sends It to Gemini AI</h2>
+                    <p>
+                        Your claim is securely sent to Google's Gemini language model, which generates an educational analysis based on the instructions provided by HealthLens.
+                    </p>
+                </div>
+
+                <!-- Arrow separator -->
+                <div class="step-arrow">↓</div>
+
+                <!-- Step 3 -->
+                <div class="workflow-step">
+                    <div class="step-number">3</div>
+                    <h2>AI Analyzes the Claim</h2>
+                    <p>
+                        The AI examines the wording, context, and educational considerations behind your claim. 
+                        It identifies important factors that would help you think critically about whether and how 
+                        to trust the information.
+                    </p>
+                </div>
+
+                <!-- Arrow separator -->
+                <div class="step-arrow">↓</div>
+
+                <!-- Step 4 -->
+                <div class="workflow-step">
+                    <div class="step-number">4</div>
+                    <h2>Response is Formatted</h2>
+                    <p>
+                        HealthLens converts the AI response from Markdown into clean, readable HTML with proper 
+                        formatting, headings, and lists. This makes the analysis easy to scan and understand.
+                    </p>
+                </div>
+
+                <!-- Arrow separator -->
+                <div class="step-arrow">↓</div>
+
+                <!-- Step 5 -->
+                <div class="workflow-step">
+                    <div class="step-number">5</div>
+                    <h2>You Receive an Educational Report</h2>
+                    <p>Your report includes:</p>
+                    <ul>
+                        <li><strong>Claim Category</strong> — The type of health claim (nutrition, treatment, etc.)</li>
+                        <li><strong>Context</strong> — Relevant background information to understand the claim</li>
+                        <li><strong>Points for Critical Evaluation</strong> — Key considerations for evaluating the claim</li>
+                        <li><strong>Questions to Explore</strong> — Thoughtful questions that help you dig deeper</li>
+                        <li><strong>Further Sources</strong> — Types of evidence and reliable resources to learn more</li>
+                        <li><strong>Key Takeaway</strong> — A summary of the most important educational message</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Educational note -->
+            <section class="info-card educational-note">
+                <h2>Important: Critical Thinking, Not Verification</h2>
+                <p>
+                    HealthLens teaches you <strong>how to think about health claims</strong>, not what to think about them. 
+                    The goal is to encourage thoughtful evaluation of health information so you can make more informed decisions.
+                </p>
+            </section>
+
+            <!-- Back to home button -->
+            <div class="nav-actions">
+                <a href="{{ url_for('home') }}">
+                    <button class="primary-button">Back to Home</button>
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,616 @@
+:root {
+    --primary-50: #f3f8ff;
+    --primary-100: #e7f1ff;
+    --primary-300: #b9d6ff;
+    --primary-500: #4f8dff;
+    --primary-700: #355ea7;
+    --ink-900: #172033;
+    --ink-700: #33435f;
+    --ink-500: #65748b;
+    --border: #dfe9f8;
+    --surface: #ffffff;
+    --shadow: 0 20px 45px rgba(31, 69, 130, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(135deg, #f7fbff 0%, #eef5ff 100%);
+    color: var(--ink-900);
+    min-height: 100vh;
+}
+
+/* Main layout for the landing page */
+.page-shell {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.hero-section {
+    width: min(760px, 100%);
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(223, 233, 248, 0.9);
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+    padding: clamp(32px, 4vw, 56px);
+    text-align: center;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin: 0 0 12px;
+    font-size: 0.8rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--primary-700);
+    font-weight: 700;
+}
+
+h1 {
+    margin: 0 0 12px;
+    font-size: clamp(2.2rem, 4vw, 3.1rem);
+    font-weight: 700;
+    color: var(--ink-900);
+}
+
+.hero-subtitle {
+    margin: 0 0 12px;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    color: var(--ink-700);
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.hero-description {
+    margin: 0 auto 30px;
+    max-width: 620px;
+    font-size: 1rem;
+    color: var(--ink-500);
+    line-height: 1.7;
+}
+
+/* Primary claim input panel */
+.claim-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 10px 24px rgba(31, 69, 130, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 180px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 16px 18px;
+    resize: vertical;
+    font: inherit;
+    color: var(--ink-900);
+    background: var(--primary-50);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea:focus {
+    border-color: var(--primary-500);
+    box-shadow: 0 0 0 4px rgba(79, 141, 255, 0.18);
+}
+
+button {
+    align-self: center;
+    border: none;
+    border-radius: 999px;
+    padding: 13px 24px;
+    background: linear-gradient(135deg, var(--primary-500), var(--primary-700));
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 12px 24px rgba(79, 141, 255, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 28px rgba(79, 141, 255, 0.3);
+}
+
+.secondary-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0 24px;
+    font-size: 0.95rem;
+}
+
+.secondary-links a {
+    color: var(--primary-700);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.secondary-links a:hover {
+    text-decoration: underline;
+}
+
+.disclaimer {
+    margin: 0;
+    font-size: 0.84rem;
+    line-height: 1.6;
+    color: var(--ink-500);
+    max-width: 680px;
+    margin-inline: auto;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+@media (max-width: 640px) {
+    .page-shell {
+        padding: 16px;
+    }
+
+    .hero-section {
+        padding: 24px 18px;
+        border-radius: 20px;
+    }
+
+    .claim-panel {
+        padding: 14px;
+    }
+
+    textarea {
+        min-height: 156px;
+    }
+
+    .secondary-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* filepath: c:\Users\Rishitha\Desktop\HealthLens\static\style.css */
+/* ...existing code... */
+
+/* Result page specific layout adjustments */
+.result-page {
+    padding: 40px 20px;
+    min-height: auto;
+}
+
+/* Analysis card container */
+.analysis-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 10px 24px rgba(31, 69, 130, 0.08);
+    text-align: left;
+    margin: 24px 0;
+}
+
+/* Content wrapper for Markdown-converted HTML */
+.analysis-content {
+    line-height: 1.8;
+}
+
+/* Headings within analysis */
+.analysis-content h1 {
+    font-size: 1.8rem;
+    margin: 28px 0 16px;
+    color: var(--ink-900);
+    text-align: left;
+}
+
+.analysis-content h2 {
+    font-size: 1.5rem;
+    margin: 24px 0 14px;
+    color: var(--primary-700);
+    text-align: left;
+    font-weight: 700;
+}
+
+.analysis-content h3 {
+    font-size: 1.2rem;
+    margin: 20px 0 12px;
+    color: var(--ink-700);
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Paragraph text within analysis */
+.analysis-content p {
+    margin: 12px 0;
+    color: var(--ink-700);
+    font-size: 1rem;
+}
+
+/* Unordered lists within analysis */
+.analysis-content ul {
+    margin: 12px 0;
+    padding-left: 24px;
+    color: var(--ink-700);
+}
+
+.analysis-content ul li {
+    margin: 8px 0;
+    line-height: 1.7;
+}
+
+/* Ordered lists within analysis */
+.analysis-content ol {
+    margin: 12px 0;
+    padding-left: 24px;
+    color: var(--ink-700);
+}
+
+.analysis-content ol li {
+    margin: 8px 0;
+    line-height: 1.7;
+}
+
+/* Bold text within analysis */
+.analysis-content strong {
+    color: var(--ink-900);
+    font-weight: 700;
+}
+
+/* Horizontal rules within analysis */
+.analysis-content hr {
+    margin: 24px 0;
+    border: none;
+    border-top: 1px solid var(--border);
+}
+
+/* Blockquotes within analysis */
+.analysis-content blockquote {
+    margin: 16px 0;
+    padding-left: 16px;
+    border-left: 4px solid var(--primary-500);
+    color: var(--ink-700);
+    font-style: italic;
+}
+
+/* Button styling for result page */
+.primary-button {
+    align-self: center;
+    border: none;
+    border-radius: 999px;
+    padding: 13px 24px;
+    background: linear-gradient(135deg, var(--primary-500), var(--primary-700));
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 12px 24px rgba(79, 141, 255, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 28px rgba(79, 141, 255, 0.3);
+}
+
+/* Result actions container */
+.result-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.result-actions a {
+    text-decoration: none;
+}
+
+/* Mobile responsive adjustments for analysis card */
+@media (max-width: 640px) {
+    .analysis-card {
+        padding: 20px 16px;
+        border-radius: 16px;
+    }
+
+    .analysis-content h1 {
+        font-size: 1.4rem;
+        margin: 20px 0 12px;
+    }
+
+    .analysis-content h2 {
+        font-size: 1.2rem;
+        margin: 18px 0 10px;
+    }
+
+    .analysis-content h3 {
+        font-size: 1rem;
+        margin: 14px 0 8px;
+    }
+
+    .analysis-content p,
+    .analysis-content ul,
+    .analysis-content ol {
+        font-size: 0.95rem;
+    }
+
+    .analysis-content ul,
+    .analysis-content ol {
+        padding-left: 18px;
+    }
+}
+/* ...existing code... */
+
+/* Information page layout */
+.info-page {
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* Information section for grouping cards */
+.info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 32px 0;
+    width: 100%;
+}
+
+/* Information cards styling */
+.info-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 10px 24px rgba(31, 69, 130, 0.08);
+    text-align: left;
+}
+
+.info-card h2 {
+    margin: 0 0 16px;
+    font-size: 1.3rem;
+    color: var(--primary-700);
+    font-weight: 700;
+}
+
+.info-card p {
+    margin: 0 0 12px;
+    color: var(--ink-700);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.info-card p:last-child {
+    margin-bottom: 0;
+}
+
+.info-card ul {
+    margin: 12px 0 0;
+    padding-left: 24px;
+    color: var(--ink-700);
+}
+
+.info-card ul li {
+    margin: 8px 0;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* Disclaimer card styling */
+.disclaimer-card {
+    background: linear-gradient(135deg, rgba(79, 141, 255, 0.05), rgba(53, 94, 167, 0.05));
+    border: 1px solid rgba(79, 141, 255, 0.15);
+}
+
+/* Workflow section for step-by-step guide */
+.workflow-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin: 32px 0;
+    width: 100%;
+}
+
+/* Individual workflow step card */
+.workflow-step {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 10px 24px rgba(31, 69, 130, 0.08);
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Step number circle */
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, var(--primary-500), var(--primary-700));
+    color: white;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.workflow-step h2 {
+    margin: 0 0 8px;
+    font-size: 1.2rem;
+    color: var(--ink-900);
+    font-weight: 700;
+}
+
+.workflow-step p {
+    margin: 0 0 8px;
+    color: var(--ink-700);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.workflow-step p:last-child {
+    margin-bottom: 0;
+}
+
+.workflow-step ul {
+    margin: 8px 0 0;
+    padding-left: 24px;
+    color: var(--ink-700);
+}
+
+.workflow-step ul li {
+    margin: 6px 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Arrow between workflow steps */
+.step-arrow {
+    font-size: 1.8rem;
+    color: var(--primary-500);
+    font-weight: 700;
+    margin: 8px 0;
+}
+
+/* Educational note card styling */
+.educational-note {
+    background: linear-gradient(135deg, rgba(79, 141, 255, 0.08), rgba(53, 94, 167, 0.08));
+    border: 1px solid rgba(79, 141, 255, 0.2);
+}
+
+.educational-note h2 {
+    color: var(--primary-700);
+}
+
+/* Navigation actions container */
+.nav-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    width: 100%;
+}
+
+.nav-actions a {
+    text-decoration: none;
+}
+
+/* Mobile responsive adjustments for info pages */
+@media (max-width: 640px) {
+    .info-page {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .info-card {
+        padding: 18px 16px;
+        border-radius: 16px;
+    }
+
+    .info-card h2 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+
+    .info-card p,
+    .info-card ul li {
+        font-size: 0.95rem;
+    }
+
+    .workflow-step {
+        padding: 20px 16px;
+        border-radius: 16px;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .workflow-step h2 {
+        font-size: 1.05rem;
+    }
+
+    .workflow-step p,
+    .workflow-step ul li {
+        font-size: 0.9rem;
+    }
+
+    .step-arrow {
+        font-size: 1.4rem;
+        margin: 4px 0;
+    }
+}
+/* ---------- Loading Overlay ---------- */
+
+.loading-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255,255,255,0.85);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    z-index: 9999;
+
+    backdrop-filter: blur(4px);
+}
+
+.loading-overlay[hidden]{
+    display:none;
+}
+
+.spinner{
+
+    width:60px;
+    height:60px;
+
+    border:6px solid #d7e6ff;
+    border-top:6px solid #4f8dff;
+
+    border-radius:50%;
+
+    animation:spin 0.9s linear infinite;
+}
+
+@keyframes spin{
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+.loading-overlay p{
+
+    font-size:1rem;
+    color:var(--ink-700);
+    font-weight:600;
+
+}
